@@ -60,6 +60,11 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         mntVehiculos.setMnemonic('a');
         mntVehiculos.setText("Vehículos");
+        mntVehiculos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mntVehiculosActionPerformed(evt);
+            }
+        });
         flmMenuPrincipal.add(mntVehiculos);
 
         mntIngresoVehiculos.setMnemonic('x');
@@ -98,7 +103,11 @@ public class MenuAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mntIngresoVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mntIngresoVehiculosActionPerformed
-        System.exit(0);
+        IngresoVehiculo ingresoVehiculo=new IngresoVehiculo();
+        dskPanel.add(ingresoVehiculo);
+        ingresoVehiculo.setVisible(true);
+        
+        
     }//GEN-LAST:event_mntIngresoVehiculosActionPerformed
 
     private void mntFacturaciónActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mntFacturaciónActionPerformed
@@ -118,6 +127,14 @@ public class MenuAdmin extends javax.swing.JFrame {
         
        
     }//GEN-LAST:event_mntRegistroActionPerformed
+
+    private void mntVehiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mntVehiculosActionPerformed
+        frmVehiculos vehiculos=new frmVehiculos();
+        dskPanel.add(vehiculos);
+        vehiculos.setVisible(true);
+        
+        
+    }//GEN-LAST:event_mntVehiculosActionPerformed
 
     /**
      * @param args the command line arguments
